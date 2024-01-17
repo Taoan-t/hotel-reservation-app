@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="459.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CartListController">
+   <top>
+      <Label text="List of your shopping carts" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="CartsTableView" prefHeight="340.0" prefWidth="394.0" BorderPane.alignment="CENTER_LEFT">
+        <columns>
+          <TableColumn fx:id="id_CartsTableColumn" prefWidth="131.0" text="Cart #" />
+            <TableColumn fx:id="price_CartsTableColumn" prefWidth="221.0" text="Total Price" />
+        </columns>
+         <BorderPane.margin>
+            <Insets left="50.0" right="50.0" top="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <bottom>
+      <Button fx:id="loadCartBtn" mnemonicParsing="false" onAction="#handleLoadCartBtn" prefHeight="27.0" prefWidth="98.0" text="Load Cart" textFill="#145ce1" BorderPane.alignment="CENTER_LEFT">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="50.0" top="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>
